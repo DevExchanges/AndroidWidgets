@@ -4,10 +4,9 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvWidget"
+        android:id="@+id/txtWidget"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/widget_margin"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:text="Click to visit my site"

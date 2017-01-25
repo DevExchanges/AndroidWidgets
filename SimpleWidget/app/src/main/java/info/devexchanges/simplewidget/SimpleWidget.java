@@ -17,18 +17,16 @@ public class SimpleWidget extends AppWidgetProvider {
         }
     }
 
-    private void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
-                                 int appWidgetId) {
-
+    private void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_simple);
-        // Construct an Intent object includes web adresss.
+
+        // Create an Intent object includes my website address
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.devexchanges.info/"));
-        // In widget we are not allowing to use intents as usually. We have to use PendingIntent instead of 'startActivity'
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-        // Here the basic operations the remote view can do.
-        views.setOnClickPendingIntent(R.id.tvWidget, pendingIntent);
-        // Instruct the widget manager to update the widget
+
+        //handle click event of the TextView (launch browser and go to my website)
+        views.setOnClickPendingIntent(R.id.txtWidget, pendingIntent);
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 }
