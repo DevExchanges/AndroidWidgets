@@ -6,11 +6,11 @@
         android:id="@+id/txt_widget"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ff6200"
+        android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="TAP IT"
+        android:text="Click to get current time"
         android:textColor="#ffffff"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold|italic"/>
 
 </LinearLayout>

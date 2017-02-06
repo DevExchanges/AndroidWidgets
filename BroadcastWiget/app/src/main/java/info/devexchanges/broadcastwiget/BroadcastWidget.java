@@ -49,7 +49,7 @@ public class BroadcastWidget extends AppWidgetProvider  {
             ComponentName appWidget = new ComponentName(context, BroadcastWidget.class);
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
 
-            // Instruct the widget manager to update the widget
+            // Update the widget
             appWidgetManager.updateAppWidget(appWidget, views);
         }
     }
