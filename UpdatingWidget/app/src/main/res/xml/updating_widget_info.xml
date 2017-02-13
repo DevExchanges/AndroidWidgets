@@ -5,5 +5,4 @@
     android:minWidth="80dp"
     android:previewImage="@mipmap/ic_launcher"
     android:resizeMode="vertical"
-    android:updatePeriodMillis="0">
-</appwidget-provider>
+    android:updatePeriodMillis="0"/>

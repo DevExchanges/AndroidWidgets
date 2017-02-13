@@ -6,9 +6,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.SystemClock;
-import android.util.Log;
 
 public class UpdatingWidget extends AppWidgetProvider {
     private PendingIntent pendingIntent;
@@ -22,16 +20,10 @@ public class UpdatingWidget extends AppWidgetProvider {
             pendingIntent = PendingIntent.getService(context, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
         }
         manager.setRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(), 60000, pendingIntent);
-        //if you need to call your pendingIntent less then 60 sec
-        //answer is here:
-        //http://stackoverflow.com/questions/29998313/how-to-run-background-service-after-every-5-sec-not-working-in-android-5-1
-        Log.d("UpdatingWidget: ","onUpdate");
     }
 
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
-        Log.d("UpdatingWidget: ","onReceive");
-
     }
 }
